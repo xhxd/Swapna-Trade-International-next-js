@@ -1,0 +1,267 @@
+.foodProductionLinesDetails {
+  display: flex;
+  justify-content: center;
+}
+
+.machine__details,
+.production__details {
+  background-color: white;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px #f6f6f6;
+  width: 80%;
+}
+
+.productDetails__top,
+.productionDetails__top {
+  display: flex;
+  background-color: transparent;
+}
+
+.production__image {
+  background-color: transparent;
+}
+
+.production__image > img {
+  width: 100%;
+  margin: 10px;
+  background-color: transparent;
+}
+
+.productionDetails__top {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.productionDetails__top > img {
+  padding: 10px;
+  width: 450px;
+  min-width: 100px;
+}
+
+.contact__info > a,
+.production__contacting > h3 {
+  color: #f74258;
+  background-color: transparent;
+}
+
+.save__part {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  background-color: transparent;
+}
+
+.save__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 37px;
+  width: 70%;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+.save__button:hover {
+  background-color: #f74258;
+}
+
+.save__button:hover .productionLineBookmark {
+  color: #ffffff;
+}
+
+.save__button:hover h4 {
+  color: #ffffff;
+}
+
+.save__icon {
+  color: #f74258;
+  padding-right: 10px;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+}
+
+.save__icon > svg {
+  background-color: transparent;
+}
+
+.save__text {
+  background-color: transparent;
+}
+
+.save__text > h4 {
+  color: #969696;
+  background-color: transparent;
+}
+
+.productDetails__bottom {
+  margin: 30px;
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent;
+}
+
+.productDetails__bottom > img {
+  max-width: 350px;
+  min-width: 100px;
+}
+
+.productDetails__bottom > table,
+.production__contacting > table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+}
+
+.tableData > tbody > tr > td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.tableData:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.tableData > tbody > tr:nth-child(even) td {
+  background-color: #dddddd;
+}
+
+.production__contacting {
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: transparent;
+}
+
+.productionDetails__bottom {
+  margin: 40px;
+  background-color: transparent;
+}
+
+.production__description {
+  background-color: transparent;
+}
+
+.production__description > p {
+  background-color: transparent;
+}
+
+.production__description > strong > p {
+  background-color: transparent;
+}
+
+.production__specs {
+  background-color: transparent;
+}
+
+.productionLineBookmark {
+  padding: 0px;
+}
+
+@media screen and (max-width: 770px) and (min-width: 426px) {
+  .foodProductionLinesDetails {
+    display: flex;
+    justify-content: center;
+  }
+
+  .production__details {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .productionDetails__top {
+    display: grid;
+  }
+
+  .productDetails__top {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    column-gap: 30px;
+    justify-items: center;
+    grid-template-areas: "contact contact ";
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .foodProductionLinesDetails {
+    display: flex;
+    justify-content: center;
+  }
+
+  .production__details {
+    width: 100%;
+    margin: 0px;
+  }
+
+  .production__details {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .productDetails__top,
+  .productionDetails__top {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .productDetails__bottom {
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    align-items: center;
+  }
+
+  .productDetails__bottom > img {
+    width: 80%;
+    margin-bottom: 30px;
+  }
+
+  .machine__details,
+  .production__details {
+    width: 100%;
+  }
+
+  .dataTable {
+    width: 90%;
+    margin-bottom: 40px;
+  }
+
+  .productionDetails__top {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .production__image {
+    width: 70vw;
+    margin: 10px;
+  }
+
+  .production__image > img {
+    width: 100%;
+    margin: 10px;
+  }
+
+  .production__contacting {
+    max-width: 320px;
+  }
+
+  .production__contacting > h3 {
+    text-align: center;
+  }
+
+  .production__name > h2 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .productionDetails__bottom {
+    max-width: 320px;
+    margin: 10px;
+  }
+}

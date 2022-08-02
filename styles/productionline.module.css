@@ -1,0 +1,120 @@
+.production__lines,
+.food__equipments {
+  background-color: white;
+  width: 87%;
+  max-width: 1000px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px #f6f6f6;
+  margin: 0 0 80px 0;
+}
+
+.production__lines {
+  margin-left: 6%;
+}
+
+.food__equipments {
+  margin-left: 6%;
+}
+
+.productionLines__heading,
+.foodEquipments__heading {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+  align-items: center;
+  border-radius: 10px 50px 50px 10px;
+}
+
+.productionLines__headingName,
+.foodEquipments__headingName {
+  background-color: transparent;
+  padding: 0 20px 0 50px;
+  font-size: 35px;
+  color: #f74258;
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+.productionLines__headingNumber,
+.foodEquipments__headingNumber {
+  padding: 10px;
+  background-color: white;
+  color: #f74258;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+.all__productions,
+.all__equipments {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  background-color: white;
+  border-radius: 0 0 10px 10px;
+}
+
+.production__line {
+  border-bottom: 3px solid rgb(224, 224, 224);
+  display: flex;
+  width: 95%;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  cursor: pointer;
+  background-color: white;
+}
+
+@media screen and (max-width: 425px) {
+  .production__line {
+    flex-direction: column;
+  }
+}
+
+.production__line:hover > .line__name > h3 {
+  color: #e31e25;
+}
+
+.line__name {
+  width: 50%;
+}
+
+.line__name > h3 {
+  font-weight: 500;
+  font-size: 25px;
+  color: #7a7a7a;
+  background-color: white;
+}
+
+.line__image {
+  width: 250px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  object-fit: fill;
+}
+
+.line__image > img {
+  height: 100px;
+  width: 250px;
+  object-fit: cover;
+  object-position: 100% 39%;
+}
+
+.production__contacting {
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.productionDetails__bottom {
+  margin: 40px;
+}

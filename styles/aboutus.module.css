@@ -1,0 +1,53 @@
+.aboutus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aboutus__description {
+  background-color: white;
+  width: 60vw;
+  max-width: 600px;
+  padding: 50px;
+  background-image: url("../public/images/LogoOpaque.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60%;
+  box-shadow: 10px 10px 10px #f6f6f6;
+  height: fit-content;
+}
+
+.aboutus__description:hover {
+  box-shadow: 10px 10px 10px #eeeeee;
+}
+
+.page__right {
+  display: flex;
+  justify-content: center;
+}
+
+.aboutus__description > h2 {
+  color: #e14e54;
+}
+
+.aboutus__description > h3 {
+  text-align: center;
+}
+
+.contact__info {
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent;
+}
+
+.contact__info > p {
+  font-weight: 600;
+}
+
+@media screen and (max-width: 770px) {
+  .aboutus__description {
+    width: 90vw;
+    margin: 20px 0;
+    border-radius: 10px;
+  }
+}

@@ -1,0 +1,286 @@
+.machine__details {
+  background-color: white;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px #f6f6f6;
+  max-width: 1100px;
+}
+
+.machine__detailsAll {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  background-color: #f6f6f6;
+}
+
+.productDetails__top {
+  display: flex;
+  width: 100%;
+  background-color: transparent;
+}
+
+.image__1 {
+  width: 50%;
+  background-color: white;
+}
+
+.image__1 > img {
+  padding: 10px;
+  width: 450px;
+  min-width: 100px;
+  width: 100%;
+  background-color: white;
+}
+
+.all__description {
+  max-width: 500px;
+  margin: 30px 10px;
+  min-width: 200px;
+  width: 30%;
+  background-color: transparent;
+}
+
+.contact {
+  margin: 30px 10px;
+  padding-right: 10px;
+  background-color: transparent;
+}
+
+.contact__info {
+  display: flex;
+  justify-content: space-between;
+  min-width: 200px;
+  align-items: center;
+  background-color: transparent;
+}
+
+.contact__info > a {
+  color: #f74258;
+  font-size: unset;
+  background-color: transparent;
+}
+
+.contact__info > a {
+  height: fit-content;
+  background-color: transparent;
+}
+
+.save__part {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+}
+
+.save__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 37px;
+  width: 70%;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.save__button:hover {
+  background-color: #f74258;
+}
+
+.save__button:hover .save__icon {
+  color: #ffffff;
+}
+
+.save__button:hover h4 {
+  color: #ffffff;
+}
+
+.save__button:hover .save__text {
+  background-color: #f74258;
+}
+
+.save__icon {
+  color: #f74258;
+  padding-right: 10px;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+}
+
+.save__text {
+  background-color: white;
+}
+
+.save__text > h4 {
+  color: #969696;
+  background-color: transparent;
+}
+
+.productDetails__bottom {
+  margin: 30px;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+}
+
+.productDetails__bottom > img {
+  max-width: 350px;
+  min-width: 100px;
+}
+
+.productDetails__bottom > table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+}
+
+.tableDataCol {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.tableDataCol:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.tableRow {
+  background-color: white;
+}
+
+.dataTable {
+  background-color: white;
+}
+
+.dataTable > tbody {
+  background-color: white;
+}
+
+.dataTable > tbody > tr {
+  background-color: white;
+}
+
+.dataTable > tbody > tr > td {
+  background-color: white;
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.dataTable > tbody > tr:nth-child(even) td {
+  background-color: #dddddd;
+}
+
+.packing-m-bookmarks {
+  padding: 0px;
+}
+
+.nameAndContact {
+  width: 40%;
+  margin: 0 0 0 10%;
+  background-color: transparent;
+}
+
+.name {
+  background-color: transparent;
+}
+
+@media screen and (max-width: 425px) {
+  .image__1 {
+    width: 90%;
+  }
+
+  .image__1 > img {
+    width: 80vw;
+  }
+
+  .nameAndContact {
+    width: 90%;
+    margin: 10px;
+    background-color: transparent;
+  }
+
+  .productDetails__top,
+  .productionDetails__top {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .productDetails__bottom {
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    align-items: center;
+  }
+
+  .productDetails__bottom > img {
+    width: 80%;
+    margin-bottom: 30px;
+  }
+
+  .machine__details,
+  .production__details {
+    width: 100%;
+  }
+
+  .dataTable {
+    width: 90%;
+    margin-bottom: 40px;
+  }
+
+  .productionDetails__top {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .production__image {
+    width: 70vw;
+    margin: 10px;
+  }
+
+  .production__image > img {
+    width: 100%;
+    margin: 10px;
+  }
+
+  .production__contacting {
+    max-width: 320px;
+  }
+
+  .production__contacting > h3 {
+    text-align: center;
+  }
+
+  .production__name > h2 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .productionDetails__bottom {
+    max-width: 320px;
+    margin: 10px;
+  }
+}
+
+@media screen and (max-width: 770px) and (min-width: 426px) {
+  .image__1 {
+    width: 100%;
+  }
+
+  .image__1 > img {
+    width: 100%;
+  }
+
+  .nameAndContact {
+    grid-area: contact;
+    width: 70%;
+    margin: 20px;
+  }
+  .productDetails__top {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    column-gap: 30px;
+    justify-items: center;
+    grid-template-areas: "contact contact ";
+  }
+}

@@ -1,0 +1,137 @@
+.title {
+  top: 15%;
+  position: absolute;
+  padding-left: 80px;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.warningIcon {
+  background-color: transparent;
+}
+
+.warning {
+  margin: 120px 80px 20px 80px;
+  padding: 20px;
+  background-color: rgba(255, 255, 0, 0.275);
+  display: flex;
+}
+
+.warning > p {
+  background-color: transparent;
+  display: flex;
+}
+
+.saved__products {
+  background-color: #fafafa;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: auto;
+  margin: 20px;
+  margin-top: 50px;
+}
+
+.saved__production {
+  background-color: #fafafa;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: auto;
+  margin: 20px;
+}
+
+.saved__product {
+  background-color: white;
+  display: flex;
+  width: 600px;
+  border-radius: 10px;
+  margin: 10px 10px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.savedProduct__details {
+  display: flex;
+  align-items: center;
+  background-color: white;
+}
+
+.savedProduct__details > img {
+  height: 150px;
+  max-width: 170px;
+  padding: 10px;
+  background-color: white;
+}
+
+.savedProduct__name {
+  padding: 20px;
+  width: 250px;
+  margin: 7px;
+  background-color: white;
+}
+
+.savedProduct__button {
+  width: 100px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  background-image: linear-gradient(
+    to right,
+    #24c6dc 0%,
+    #514a9d 51%,
+    #24c6dc 100%
+  );
+  margin: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  display: block;
+  right: 5%;
+  position: relative;
+}
+
+.savedProduct__button:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 770px) {
+  .warning {
+    margin: 165px 20px 20px 20px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .saved__product {
+    flex-direction: column;
+    width: 215px;
+    align-items: center;
+  }
+
+  .savedProduct__details {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .savedProduct__name {
+    width: 90%;
+    text-align: center;
+  }
+
+  .savedProduct__button {
+    position: unset;
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .warning {
+    margin: 165px 20px 20px 20px;
+  }
+}
