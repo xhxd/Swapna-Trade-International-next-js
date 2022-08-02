@@ -12,6 +12,7 @@ import {
   BlockMachineData,
 } from "../lib/getData";
 import { headerSearch } from "../lib/headerSearch";
+import Head from "next/head";
 
 export async function getStaticProps() {
   var packingMachine = await packingMachineData();
@@ -94,8 +95,26 @@ export default function allCosmeticMachines({
     }
   };
 
+  headerSearch(
+    packingMachine,
+    productionLine,
+    cosmeticMachine,
+    blockMachine,
+    input,
+    windowSize
+  );
+
   return (
     <div>
+      <Head>
+        <title>Swapna Trade International | Cosmetic Machines</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta
+          name="description"
+          content="Buy high quality food machines, cosmetic machines, block machines ets."
+        />
+        <meta name="keywords" content="cosmetic machines" />
+      </Head>
       <Header
         packingMachine={packingMachine}
         productionLine={productionLine}

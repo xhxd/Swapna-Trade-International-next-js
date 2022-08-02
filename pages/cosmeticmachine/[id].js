@@ -3,6 +3,7 @@ import { doc, getDoc } from "firebase/firestore";
 import db from "../../firebase";
 import Header from "../../components/Header";
 import styles from "../../styles/productionlineDetails.module.css";
+import Head from "next/head";
 
 export async function getStaticPaths() {
   var cosmeticMachine = await CosmeticMachineData();
@@ -66,6 +67,20 @@ const cosmeticMachineDetails = ({ docSnap }) => {
 
   return (
     <div>
+      <Head>
+        <title>
+          Swapna Trade International | Cosmetic Machine | {docSnap.data.name}
+        </title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta
+          name="description"
+          content="Buy high quality food machines, cosmetic machines, block machines ets."
+        />
+        <meta
+          name="keywords"
+          content="food machines, cosmetic machines, block machines, machines, production lines"
+        />
+      </Head>
       <Header />
       <div className={styles.foodProductionLinesDetails}>
         <div className={styles.production__details}>

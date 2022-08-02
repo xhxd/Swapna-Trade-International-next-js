@@ -9,6 +9,7 @@ import {
 import styles from "../styles/bookmarkLayout.module.css";
 import BookmarkLayout from "../components/BookmarkLayout";
 import { useEffect, useState } from "react";
+import Head from "next/head";
 
 export async function getStaticProps() {
   var packingMachine = await packingMachineData();
@@ -117,6 +118,18 @@ const bookmarks = ({
 
   return (
     <div>
+      <Head>
+        <title>Swapna Trade International | Bookmarks</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta
+          name="description"
+          content="Buy high quality food machines, cosmetic machines, block machines ets."
+        />
+        <meta
+          name="keywords"
+          content="food machines, cosmetic machines, block machines, machines, production lines"
+        />
+      </Head>
       <Header
         packingMachine={packingMachine}
         productionLine={productionLine}

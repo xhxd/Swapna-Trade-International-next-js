@@ -1,4 +1,3 @@
-import Logo from "../public/images/InkedFried Bugle Chips Production Line_LI.jpg";
 import styles from "../styles/productionline.module.css";
 import Image from "next/image";
 import Link from "next/link";

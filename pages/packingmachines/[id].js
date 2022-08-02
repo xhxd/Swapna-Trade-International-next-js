@@ -3,6 +3,7 @@ import { doc, getDoc } from "firebase/firestore";
 import db from "../../firebase";
 import Header from "../../components/Header";
 import styles from "../../styles/packingMachineDetails.module.css";
+import Head from "next/head";
 
 export async function getStaticPaths() {
   var packingMachine = await packingMachineData();
@@ -74,6 +75,20 @@ const packingMachinesDetails = ({ docSnap }) => {
 
   return (
     <div className="bg-[#dddddd]">
+      <Head>
+        <title>
+          Swapna Trade International | Packing Machine | {docSnap.data.name}
+        </title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta
+          name="description"
+          content="Buy high quality food machines, cosmetic machines, block machines ets."
+        />
+        <meta
+          name="keywords"
+          content="food machines, cosmetic machines, block machines, machines, production lines"
+        />
+      </Head>
       <Header />
       <div className={styles.machine__detailsAll}>
         <div className={styles.machine__details}>
