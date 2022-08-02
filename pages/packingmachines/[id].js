@@ -31,26 +31,20 @@ export async function getStaticProps(content) {
 
 const packingMachinesDetails = ({ docSnap }) => {
   const saveMachine = (machineID) => {
-    console.log(machineID);
-
     const localStorage = window.localStorage;
 
     var machines = [];
     var presentMachines = [];
 
-    console.log(localStorage.getItem("packingMachine"));
     if (localStorage.getItem("packingMachine") == null) {
       machines = [];
       machines.push(machineID);
       localStorage.setItem("packingMachine", JSON.stringify(machines));
     } else {
       presentMachines = JSON.parse(localStorage.getItem("packingMachine"));
-      console.log(presentMachines);
 
       const truthVerifier = (element) => element == machineID;
       var truth = presentMachines.some(truthVerifier);
-
-      console.log(truth);
 
       if (truth) {
         return;
@@ -60,7 +54,6 @@ const packingMachinesDetails = ({ docSnap }) => {
       }
     }
   };
-  console.log(docSnap);
 
   var tableDataAll = "";
 

@@ -4,26 +4,20 @@ import Link from "next/link";
 
 function BlockMachine({ name, image, id }) {
   const saveMachine = (machineID) => {
-    console.log(machineID);
-
     const localStorage = window.localStorage;
 
     var machines = [];
     var presentMachines = [];
 
-    console.log(localStorage.getItem("blockMachine"));
     if (localStorage.getItem("blockMachine") == null) {
       machines = [];
       machines.push(machineID);
       localStorage.setItem("blockMachine", JSON.stringify(machines));
     } else {
       presentMachines = JSON.parse(localStorage.getItem("blockMachine"));
-      console.log(presentMachines);
 
       const truthVerifier = (element) => element == machineID;
       var truth = presentMachines.some(truthVerifier);
-
-      console.log(truth);
 
       if (truth) {
         return;

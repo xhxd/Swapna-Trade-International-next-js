@@ -89,11 +89,6 @@ const bookmarks = ({
     setReload(false);
   }, [reload]);
 
-  console.log(savedPacking);
-  console.log(savedLine);
-  console.log(savedCosmetic);
-  console.log(savedBlock);
-
   const removeItem = (type, id) => {
     const localStorage = window.localStorage;
 

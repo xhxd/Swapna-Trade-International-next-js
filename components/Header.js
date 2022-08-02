@@ -56,8 +56,6 @@ const Header = ({
     } else {
       setFourthSlash(true);
     }
-
-    console.log(urlArr);
   }, []);
 
   useEffect(() => {
@@ -75,9 +73,6 @@ const Header = ({
 
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-
-  console.log(windowSize);
-  console.log(fourthSlash);
 
   //Calling out the input result div
 
@@ -204,12 +199,8 @@ const Header = ({
       }
     } else {
       setHeadderMount(true);
-
-      console.log(packingMachine);
     }
   }, [headerMount, input]);
-
-  console.log(packingMachine);
 
   const headerLarge = () => (
     <div className={`${styles.header} header`}>

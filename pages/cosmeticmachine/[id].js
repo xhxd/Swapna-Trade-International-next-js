@@ -32,26 +32,20 @@ export async function getStaticProps(content) {
 const cosmeticMachineDetails = ({ docSnap }) => {
   const saveProduction = () => {};
   const saveMachine = (machineID) => {
-    console.log(machineID);
-
     const localStorage = window.localStorage;
 
     var machines = [];
     var presentMachines = [];
 
-    console.log(localStorage.getItem("cosmeticMachine"));
     if (localStorage.getItem("cosmeticMachine") == null) {
       machines = [];
       machines.push(machineID);
       localStorage.setItem("cosmeticMachine", JSON.stringify(machines));
     } else {
       presentMachines = JSON.parse(localStorage.getItem("cosmeticMachine"));
-      console.log(presentMachines);
 
       const truthVerifier = (element) => element == machineID;
       var truth = presentMachines.some(truthVerifier);
-
-      console.log(truth);
 
       if (truth) {
         return;

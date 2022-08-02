@@ -1,7 +1,6 @@
 import PackingMachine from "./PackingMachine";
 
 const PackingMachines = ({ machineData }) => {
-  console.log(machineData);
   return (
     <div className="flex flex-wrap bg-transparent justify-center m-[40px]">
       {machineData.map((Data) => (
