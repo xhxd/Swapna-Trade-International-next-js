@@ -191,6 +191,8 @@ const Header = ({
     }
   }, [headerMount, input]);
 
+  console.log("this is the new deployment");
+
   const headerLarge = () => (
     <div className={`${styles.header} header`}>
       <div className={styles.headerLeft}>
