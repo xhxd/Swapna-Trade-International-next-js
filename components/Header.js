@@ -30,6 +30,7 @@ const Header = ({
   const [fourthSlash, setFourthSlash] = useState(false);
   const [input, setInput] = useState("");
   const [headerMount, setHeadderMount] = useState(false);
+  const [results, setResults] = useState([]);
 
   useEffect(() => {
     var urlArr = window.location.href.split("/");
@@ -146,53 +147,41 @@ const Header = ({
 
         //Rendering the data
         const giveDiv = () => {
-          var htmlS = "";
+          var htmlS = [];
 
           getSearchResult()[0].map((result) => {
-            htmlS += `
-            <a href='/packingmachines/${result.id}' target="_blank">
-            <div>
-              <p>${result.data.name.slice(0, 30)}...</p>
-              <img src=${result.data.image1} alt="" />
-            </div>
-            </a>
-            `;
+            htmlS.push({
+              url: `/packingmachines/${result.id}`,
+              name: result.data.name.slice(0, 30),
+              image: result.data.image1,
+            });
           });
 
           getSearchResult()[1].map((result) => {
-            htmlS += `
-          <a href='/foodproductionlines/${result.id}' target="_blank">
-          <div>
-            <p>${result.data.name.slice(0, 30)}...</p>
-            <img src=${result.data.image1} alt="" />
-          </div>
-          </a>
-          `;
+            htmlS.push({
+              url: `/foodproductionlines/${result.id}`,
+              name: result.data.name.slice(0, 30),
+              image: result.data.image1,
+            });
           });
 
           getSearchResult()[2].map((result) => {
-            htmlS += `
-        <a href='/cosmeticmachine/${result.id}' target="_blank">
-        <div>
-          <p>${result.data.name.slice(0, 30)}...</p>
-          <img src=${result.data.image1} alt="" />
-        </div>
-        </a>
-        `;
+            htmlS.push({
+              url: `/cosmeticmachine/${result.id}`,
+              name: result.data.name.slice(0, 30),
+              image: result.data.image1,
+            });
           });
 
           getSearchResult()[3].map((result) => {
-            htmlS += `
-      <a href='/blockmachine/${result.id}' target="_blank">
-      <div>
-        <p>${result.data.name.slice(0, 30)}...</p>
-        <img src=${result.data.image1} alt="" />
-      </div>
-      </a>
-      `;
+            htmlS.push({
+              url: `/blockmachine/${result.id}`,
+              name: result.data.name.slice(0, 30),
+              image: result.data.image1,
+            });
           });
 
-          document.getElementById("searchResult").innerHTML = htmlS;
+          setResults(htmlS);
         };
 
         giveDiv();
@@ -318,7 +307,19 @@ const Header = ({
           </Link>
         </span>
       </div>
-      <div className="searchDivHtml" id="searchResult" tabIndex={0}></div>
+      <div className="searchDivHtml" id="searchResult" tabIndex={0}>
+        {results?.length > 0 &&
+          results.map(({ url, name, image }, i) => (
+            <Link href={url} key={i}>
+              <a href="#">
+                <div>
+                  <p>{name}...</p>
+                  <img src={image} alt="" />
+                </div>
+              </a>
+            </Link>
+          ))}
+      </div>
     </div>
   );
 

@@ -91,7 +91,7 @@ export default function Home({
               onChange={(e) => {
                 setInput(e.target.value);
               }}
-              className={`border-none h-[30px] text-[15px] focus:outline-none bg-white searchInput`}
+              className={`border-none h-[30px] text-[15px] focus:outline-none bg-white w-[80%] searchInput`}
             />
           </div>
           <div className="searchDivHtml" id="searchResult" tabIndex={0}></div>
